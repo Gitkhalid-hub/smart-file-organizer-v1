@@ -1,17 +1,23 @@
-**SMART FILE ORGANIZER V1**
+# SMART FILE ORGANIZER V1
 
 A Python-based automation tool that scans a folder, classifies files by extension, and automatically organizes them into category folders.
 
-**FEATURES**:
-Scans folders for files
-Classifies files using extensions
-Automatically creates category folders
-Moves files into matching folders
-Handles unknown file types safely
-Prints organization summary after execution
+---
 
+# Features
 
-**PROJECT** **STRUCTURE**
+- Scans folders for files
+- Classifies files using extensions
+- Automatically creates category folders
+- Moves files into matching folders
+- Handles unknown file types safely
+- Prints organization summary after execution
+
+---
+
+# Project Structure
+
+```text
 SMART_FILE_ORGANIZER_V1/
 │
 ├── core/
@@ -27,48 +33,58 @@ SMART_FILE_ORGANIZER_V1/
 ├── requirements.txt
 ├── .gitignore
 └── pseudocode.txt
+```
 
-**ARCHITECTURE OVERVIEW**
+---
 
-**FolderScanner**
+# Architecture Overview
 
-Responsible for:
-
-scanning folders
-returning files only
-
-**FileClassifier**
+## FolderScanner
 
 Responsible for:
+- scanning folders
+- returning files only
 
-extracting file extensions
-deciding file categories
+---
 
-**FileOrganizer**
-
-Responsible for:
-
-creating category folders
-moving files into destination folders
-
-**MAIN.PY**
+## FileClassifier
 
 Responsible for:
+- extracting file extensions
+- deciding file categories
 
-coordinating the full workflow
-summary reporting
+---
 
-**CATEGORIES**
+## FileOrganizer
+
+Responsible for:
+- creating category folders
+- moving files into destination folders
+
+---
+
+## main.py
+
+Responsible for:
+- coordinating the full workflow
+- summary reporting
+
+---
+
+# Categories
 
 Current supported categories:
 
-**documents** → .pdf, .docx, .txt
-**images** → .jpg, .jpeg, .png
-**code** → .py, .js
-**others** → unknown extensions
+- documents → .pdf, .docx, .txt
+- images → .jpg, .jpeg, .png
+- code → .py, .js
+- others → unknown extensions
 
-**Example Output**
+---
 
+# Example Output
+
+```text
 Moved: report.pdf → documents
 Moved: image.png → images
 
@@ -77,32 +93,44 @@ Moved: image.png → images
 {'documents', 'images', 'others'}
 
 Organization completed successfully
+```
 
+---
 
-**Technologies Used**
-Python
-pathlib
-Object-Oriented Programming (OOP)
-File System Automation
-Future Improvements
+# Technologies Used
 
-**Potential future upgrades:**
+- Python
+- pathlib
+- Object-Oriented Programming (OOP)
+- File System Automation
 
-duplicate file handling
-recursive folder scanning
-logging system
-smart renaming
-real-time watch mode
-configuration support
-Learning Focus
+---
+
+# Future Improvements
+
+Potential future upgrades:
+
+- duplicate file handling
+- recursive folder scanning
+- logging system
+- smart renaming
+- real-time watch mode
+- configuration support
+
+---
+
+# Learning Focus
 
 This project was built to practice:
 
-system design thinking
-responsibility separation
-filesystem automation
-modular architecture
-Python OOP principles
-Author
+- system design thinking
+- responsibility separation
+- filesystem automation
+- modular architecture
+- Python OOP principles
 
-**Khalid Ishola Abdulkadir**
+---
+
+# Author
+
+Khalid Ishola Abdulkadir
