@@ -1,0 +1,72 @@
+SMART FILE ORGANIZER — V1
+
+1. Define category rules
+
+documents → .pdf, .docx, .txt
+images → .jpg, .jpeg, .png
+code → .py, .js
+others → unknown extensions
+
+
+2. FolderScanner
+
+CLASS FolderScanner:
+
+    METHOD scan(folder_path):
+
+        IF folder does not exist:
+            report error
+
+        GET all files inside folder
+
+        IGNORE folders
+
+        RETURN list of files
+
+
+3. FileClassifier
+
+CLASS FileClassifier:
+
+    METHOD classify(file_path):
+
+        GET file extension
+
+        FOR each category in rules:
+
+            IF extension is in that category:
+                RETURN category
+
+        RETURN "others"
+
+
+4. FileOrganizer
+
+CLASS FileOrganizer:
+
+    METHOD organize(file_path, category, destination_root):
+
+        CREATE category folder if it does not exist
+
+        MOVE file into category folder
+
+        RETURN moved file information
+
+
+5. Main Flow
+
+SET source_folder
+
+CREATE scanner
+CREATE classifier
+CREATE organizer
+
+files = scanner.scan(source_folder)
+
+FOR each file in files:
+
+    category = classifier.classify(file)
+
+    organizer.organize(file, category, source_folder)
+
+PRINT summary  C:\Users\KHIDDAFA\PycharmProjects\SMART_FILE_ORGANIZER_V1\test_folder 
