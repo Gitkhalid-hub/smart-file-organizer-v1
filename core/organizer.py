@@ -17,9 +17,20 @@ class FileOrganizer:
 
         # 3. Build destination path
         destination = target_category / source_file.name
+        
+        # check duplicates
+        if destination.exists():
+            counter = 1
+            
+            while destination.exists():
+                # adjusting file name
+                new_filename = f"{source_file.stem}_{counter}{source_file.suffix}"
+                destination = target_category / new_filename
+                counter += 1
 
         # 4. Move the file
         source_file.rename(destination)
 
         # 5. Print summary
         print(f"Moved: {source_file.name} → {category}")
+        return destination

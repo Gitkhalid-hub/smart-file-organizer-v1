@@ -12,6 +12,7 @@ A Python-based automation tool that scans a folder, classifies files by extensio
 - Moves files into matching folders
 - Handles unknown file types safely
 - Prints organization summary after execution
+- Prevents duplicate file overwrites using automatic filename versioning
 
 ---
 
@@ -128,6 +129,37 @@ This project was built to practice:
 - filesystem automation
 - modular architecture
 - Python OOP principles
+
+---
+
+
+## V1.1 Upgrade — Duplicate File Handling
+
+The organizer now safely handles duplicate filenames.
+
+If a file with the same name already exists inside a category folder, the system automatically generates a new safe filename instead of overwriting the existing file.
+
+Example:
+
+```text
+report.pdf
+↓
+report_1.pdf
+↓
+report_2.pdf
+```
+
+This improves:
+- filesystem safety
+- collision handling
+- automation reliability
+
+---
+
+## Project Status
+
+V1 — Core file organization system  
+V1.1 — Added duplicate file handling for safer file routing
 
 ---
 

@@ -69,4 +69,36 @@ FOR each file in files:
 
     organizer.organize(file, category, source_folder)
 
-PRINT summary  C:\Users\KHIDDAFA\PycharmProjects\SMART_FILE_ORGANIZER_V1\test_folder 
+PRINT summary
+
+
+FILE ORGANIZER V1.1 — DUPLICATE HANDLING
+
+METHOD organize(file_path, category, destination_root):
+
+    source_file = file_path
+
+    target_category = destination_root / category
+
+    create target_category folder if it does not exist
+
+    destination_path = target_category / source_file.name
+
+    IF destination_path already exists:
+
+        create counter starting at 1
+
+        WHILE destination_path already exists:
+
+            create new filename:
+                original_name + "_" + counter + original_extension
+
+            update destination_path
+
+            increase counter
+
+    move source_file to destination_path
+
+    print moved message
+
+    return destination_path
