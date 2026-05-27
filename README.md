@@ -31,44 +31,28 @@ SMART_FILE_ORGANIZER_V1/
 │
 ├── main.py
 ├── README.md
+├── pseudocode.txt
+├── breakdown_engine.md
 ├── requirements.txt
-├── .gitignore
-└── pseudocode.txt
+└── .gitignore
 ```
 
 ---
 
-# Architecture Overview
+# 🧠 Architecture
 
-## FolderScanner
+The system is built with clear separation of concerns and layered filesystem automation design.
 
-Responsible for:
-- scanning folders
-- returning files only
+### Architecture Layers
 
----
-
-## FileClassifier
-
-Responsible for:
-- extracting file extensions
-- deciding file categories
-
----
-
-## FileOrganizer
-
-Responsible for:
-- creating category folders
-- moving files into destination folders
-
----
-
-## main.py
-
-Responsible for:
-- coordinating the full workflow
-- summary reporting
+| Layer | Responsibility |
+|---|---|
+| `scanner.py` | Detects files from the target folder |
+| `classifier.py` | Classifies files using extension rules |
+| `organizer.py` | Moves files safely into category folders |
+| `main.py` | Orchestrates the workflow and summary reporting |
+| `pseudocode.txt` | Planning and workflow reasoning |
+| `breakdown_engine.md` | Deep engineering dissection, debugging cognition, and structural analysis |
 
 ---
 
@@ -111,7 +95,6 @@ Organization completed successfully
 
 Potential future upgrades:
 
-- duplicate file handling
 - recursive folder scanning
 - logging system
 - smart renaming
@@ -129,6 +112,36 @@ This project was built to practice:
 - filesystem automation
 - modular architecture
 - Python OOP principles
+
+---
+
+# Breakdown Engine
+
+The project includes a dedicated engineering investigation document:
+
+```text
+breakdown_engine.md
+```
+
+This file dissects the system using a technical detective approach.
+
+It analyzes:
+
+- surface behavior
+- line-by-line execution
+- variable purpose
+- system flow
+- edge cases
+- structural patterns
+- duplicate handling logic
+- filesystem safety design
+
+This improves:
+
+- debugging cognition
+- architectural understanding
+- reasoning transparency
+- system extensibility
 
 ---
 
